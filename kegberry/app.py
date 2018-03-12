@@ -99,7 +99,7 @@ REQUIRED_PACKAGES = (
     'supervisor',
     'python-setuptools',
     'python-dev',
-    'libmysqlclient-dev',
+    'default-libmysqlclient-dev',
     'mysql-server',
     'redis-server',
 )
@@ -246,7 +246,7 @@ class KegberryApp(object):
             run_mysql(command='mysqlshow', subcommand=FLAGS.mysql_database, fail_silently=True)
         except subprocess.CalledProcessError:
             logger.info('Creating database ...')
-            run_mysql('-e "create database {}"'.format(FLAGS.mysql_database))
+            run_mysql('-e "create database {} CHARACTER SET latin1;"'.format(FLAGS.mysql_database))
 
         logger.info('Installing MySQL timezones ...')
         cmd = 'mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u {}'.format(FLAGS.mysql_user)
