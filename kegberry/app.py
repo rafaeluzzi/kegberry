@@ -100,6 +100,7 @@ REQUIRED_PACKAGES = (
     'python-setuptools',
     'python-dev',
     'default-libmysqlclient-dev',
+    'mysql-server',
     'redis-server',
 )
 
