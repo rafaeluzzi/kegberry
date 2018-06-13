@@ -24,9 +24,9 @@ def setup_package():
       version = VERSION,
       description = SHORT_DESCRIPTION,
       long_description = LONG_DESCRIPTION,
-      author = 'Beertron',
-      author_email = 'info@beertronapp.com',
-      url = 'http://beertronapp.com/',
+      author = 'Bevbot LLC',
+      author_email = 'info@bevbot.com',
+      url = 'http://kegberry.kegbot.org/',
       packages = find_packages(),
       scripts = [
         'bin/kegberry',
